@@ -46,11 +46,11 @@ The pickled data contains resized images with the shape of (32,32,3). The distri
 * number of testing data: 12630
 * number of classes/labels: 43
 
-<img src="/image/training_bar.png" alt="train" width="600" height="330"/>
+<img src="/image/training_bar.png" alt="train" width="570" height="330"/>
 
-<img src="/image/validation_bar.png" alt="valid" width="600" height="330"/>
+<img src="/image/validation_bar.png" alt="valid" width="570" height="330"/>
 
-<img src="/image/testing_bar.png" alt="test" width="600" height="330"/>
+<img src="/image/testing_bar.png" alt="test" width="570" height="330"/>
 
 <!-- <img src="/image/more.png" alt="more" width="550" height="300"/> -->
 
@@ -73,7 +73,7 @@ data_aug = ImageDataGenerator(rotation_range=13, width_shift_range=0.14, height_
 * Scaling(`zoom_range`): zoom in or out.
 * Mirroring: Horizontaly flip the image. This is not included in this project since some of the traffic signs are directional and flipping them might cause problem.
 
-<img src="/image/training_aug_bar.png" alt="aug" width="600" height="330"/>
+<img src="/image/training_aug_bar.png" alt="aug" width="570" height="330"/>
 
 
 ### Model Architecture
@@ -155,7 +155,7 @@ My final model results were:
 
 This result is obtained by trying out several combinations of hyperparameters. The model is based on the LeNet structure proposed by Yann LeCun. Then different layers are added into the network and values have been tested iteratively. The LeNet model was originally used for recognition of handwritten numbers. Since the traffic signs are more complicated in shape and color, it is reasonable to use more layers and larger number of neurons. The figure below shows the loss and the accuracy curve on validation set.
 
-<img src="/image/learning_curve.png" alt="aug" width="650" height="370"/>
+<img src="/image/learning_curve.png" alt="aug" width="680" height="370"/>
 
 
 <!-- If an iterative approach was chosen:
@@ -174,7 +174,7 @@ If a well known architecture was chosen:
 
 Here are some of the German traffic signs that I found on the web. 
 
-<img src="/image/new_test.png" alt="aug" width="550" height="250"/>
+<img src="/image/new_test.png" alt="aug" width="535" height="250"/>
 
 The quality of chosen images is good in general. But some of them might be difficult to classify since the brightness of image is low or the image is a bit tilted. Moreover, the accuracy also depends on the resolution of input image and the architechture of your network. If, for instance, a high resolution image is resized into 32x32 to fit the model input size, lots of pixel information are lost. Therefore, it is highly possible for the model to make a wrong prediction. 
 
