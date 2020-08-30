@@ -46,11 +46,11 @@ The pickled data contains resized images with the shape of (32,32,3). The distri
 * number of testing data: 12630
 * number of classes/labels: 43
 
-<img src="/image/training_bar.png" alt="train" width="700" height="370"/>
+<img src="/image/training_bar.png" alt="train" width="630" height="370"/>
 
-<img src="/image/validation_bar.png" alt="valid" width="700" height="370"/>
+<img src="/image/validation_bar.png" alt="valid" width="630" height="370"/>
 
-<img src="/image/testing_bar.png" alt="test" width="700" height="370"/>
+<img src="/image/testing_bar.png" alt="test" width="630" height="370"/>
 
 <!-- <img src="/image/more.png" alt="more" width="550" height="300"/> -->
 
@@ -73,7 +73,7 @@ data_aug = ImageDataGenerator(rotation_range=13, width_shift_range=0.14, height_
 * Scaling(`zoom_range`): zoom in or out.
 * Mirroring: Horizontaly flip the image. This is not included in this project since some of the traffic signs are directional and flipping them might cause problem.
 
-<img src="/image/training_aug_bar.png" alt="aug" width="700" height="370"/>
+<img src="/image/training_aug_bar.png" alt="aug" width="630" height="370"/>
 
 
 ### Model Architecture
@@ -90,19 +90,19 @@ My final model, which achieves around 97% validation accuracy, consist of the fo
 | Layer         		|     Description	        					| 
 |:---------------------:|:---------------------------------------------:| 
 | Input         		| 32x32x1 grayscale image   			| 
-| Convolution-1 5x5     | 1x1 stride, valid padding         	|
-| RELU					| outputs 28x28x6					    |
-| Convolution-2 5x5     | 2x2 stride, valid padding         	|
-| RELU					| outputs 12x12x16					    |
-| Convolution-3 5x5    	| 1x1 stride, valid padding         	|
-| RELU					| outputs 8x8x30					    |
-| Max pooling	      	| 2x2 stride,  outputs 4x4x30 			|
-| Flatten	            | outputs 480 (vectorization)   			|
+| Convolution 1 5x5     | 1x1 stride, valid padding         	|
+| RELU					| outputs - 28x28x6					    |
+| Convolution 2 5x5     | 2x2 stride, valid padding         	|
+| RELU					| outputs - 12x12x16					    |
+| Convolution 3 5x5    	| 1x1 stride, valid padding         	|
+| RELU					| outputs - 8x8x30					    |
+| Max pooling	      	| 2x2 stride,  outputs - 4x4x30 			|
+| Flatten	            | outputs - 480 (vectorization)   			|
 | Dropout layer 1       | keep_prob = 0.6                       |
-| Fully connected 1	+ RELU	| outputs 250       				|
-| Fully connected 2 + RELU	| outputs 90			    		|
+| Fully connected 1	+ RELU	| outputs - 250       				|
+| Fully connected 2 + RELU	| outputs - 90			    		|
 | Dropout layer 2       | keep_prob = 0.7                       |
-| Fully connected 3		| outputs 43 classes         			|
+| Fully connected 3		| outputs - 43 classes         			|
 
 
 3. Batch normalization
@@ -155,7 +155,7 @@ My final model results were:
 
 This result is obtained by trying out several combinations of hyperparameters. The model is based on the LeNet structure proposed by Yann LeCun. Then different layers are added into the network and values have been tested iteratively. The LeNet model was originally used for recognition of handwritten numbers. Since the traffic signs are more complicated in shape and color, it is reasonable to use more layers and larger number of neurons. The figure below shows the loss and the accuracy curve on validation set.
 
-<img src="/image/learning_curve.png" alt="aug" width="600" height="370"/>
+<img src="/image/learning_curve.png" alt="aug" width="650" height="370"/>
 
 
 <!-- If an iterative approach was chosen:
@@ -174,7 +174,7 @@ If a well known architecture was chosen:
 
 Here are some of the German traffic signs that I found on the web. 
 
-<img src="/image/new_test.png" alt="aug" width="650" height="370"/>
+<img src="/image/new_test.png" alt="aug" width="550" height="250"/>
 
 The quality of chosen images is good in general. But some of them might be difficult to classify since the brightness of image is low or the image is a bit tilted. Moreover, the accuracy also depends on the resolution of input image and the architechture of your network. If, for instance, a high resolution image is resized into 32x32 to fit the model input size, lots of pixel information are lost. Therefore, it is highly possible for the model to make a wrong prediction. 
 
@@ -182,7 +182,7 @@ Here are the results of the prediction. The model was able to correctly guess 7 
 
 <!-- Possible reasons might be that the image quality of new data is better than the test set(thus easier to recognize) and the number of new data is much smaller than test set.  -->
 
-<img src="/image/match.png" alt="aug" width="650" height="370"/>
+<img src="/image/match.png" alt="aug" width="550" height="200"/>
 
 
 The bar chart of softmax probabilities is located in the 26th cell of the Ipython notebook. The probabilities of all correctly classified images are very close or equal to 1.0.
