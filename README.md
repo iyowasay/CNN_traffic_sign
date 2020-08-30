@@ -46,11 +46,11 @@ The pickled data contains resized images with the shape of (32,32,3). The distri
 * number of testing data: 12630
 * number of classes/labels: 43
 
-<img src="/image/training_bar.png" alt="train" width="630" height="370"/>
+<img src="/image/training_bar.png" alt="train" width="600" height="330"/>
 
-<img src="/image/validation_bar.png" alt="valid" width="630" height="370"/>
+<img src="/image/validation_bar.png" alt="valid" width="600" height="330"/>
 
-<img src="/image/testing_bar.png" alt="test" width="630" height="370"/>
+<img src="/image/testing_bar.png" alt="test" width="600" height="330"/>
 
 <!-- <img src="/image/more.png" alt="more" width="550" height="300"/> -->
 
@@ -73,7 +73,7 @@ data_aug = ImageDataGenerator(rotation_range=13, width_shift_range=0.14, height_
 * Scaling(`zoom_range`): zoom in or out.
 * Mirroring: Horizontaly flip the image. This is not included in this project since some of the traffic signs are directional and flipping them might cause problem.
 
-<img src="/image/training_aug_bar.png" alt="aug" width="630" height="370"/>
+<img src="/image/training_aug_bar.png" alt="aug" width="600" height="330"/>
 
 
 ### Model Architecture
