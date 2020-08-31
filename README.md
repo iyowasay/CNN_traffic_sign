@@ -85,7 +85,7 @@ This step aims to prepare the input format for the CNN and hence speed up the pr
 
 2. Layers  
 
-My final model, which achieves around 97% validation accuracy, consist of the following layers:
+My final model, which achieves around 97% validation accuracy, consist of the following layers. One can also use TensorBoard to visualize your model architecture.
 
 | Layer         		|     Description	        					| 
 |:---------------------:|:---------------------------------------------:| 
@@ -200,11 +200,11 @@ The bar chart of softmax probabilities is located in the 26th cell of the Ipytho
 
 <img src="/image/visual.png" alt="aug" width="650" height="370"/>
 
-3. Look into the test set performance, the distribution and the quality of incorrectly classified images.
+3. Look into the test set performance, the distribution and the quality of incorrectly classified images. 
 
-4. compare the performance of different optimizers and plot the learning curves.
+4. Compare the performance of different optimizers and plot the learning curves. [article](https://ruder.io/optimizing-gradient-descent/index.html#adam)
 
-5. Try out more combination of hyperparameters or different models, such as AlexNet, VGGNet.
+5. Try out more combination of hyperparameters or different models, such as AlexNet, VGGNet. Find more traffic sign images from Google Streetview and evaluate the result.
 
-
+6. Implement early termination. It is not necessary for the model to always finish all the epochs. Instead, you can define a max number of epochs and a stop value n. The model will stop training when there's no improvement, compare with previous iteration, for the last n epochs. Or you can simply keep and save the model which gives the highest validation accuracy. This can also prevent overtraining or overfitting.
 
