@@ -198,6 +198,8 @@ The bar chart of softmax probabilities is located in the 26th cell of the Ipytho
 
 2. The visualization of convolutional layers is implemented in this project. Add the visualizing part for fully connected layers. Look into the meaning of those feature maps and gain more insights about CNN.
 
+<img src="/image/visual.png" alt="aug" width="650" height="370"/>
+
 3. Look into the test set performance, the distribution and the quality of incorrectly classified images.
 
 4. compare the performance of different optimizers and plot the learning curves.
