@@ -4,7 +4,7 @@ Overview
 ---
 In this project, the goal is to use deep learning and convolutional neural networks to classify traffic signs. After training and validating through TensorFlow and Keras, the model can correctly classify unseen traffic sign images. You will then try out your model on images of German traffic signs that you find on the website. 
 
-Here is a link to my [project code](https://github.com/iyowasay/CNN_traffic_sign/blob/master/Traffic_Sign_Classifier.ipynb)
+Here is a link to my [project code](https://github.com/iyowasay/CNN_traffic_sign/blob/master/Traffic_Sign_Classifier.ipynb), and my [HTML file](https://github.com/iyowasay/CNN_traffic_sign/blob/master/Traffic_Sign_Classifier.html).
 
 ### TensorFlow and Keras
 
@@ -174,7 +174,7 @@ If a well known architecture was chosen:
 
 Here are some of the German traffic signs that I found on the web. 
 
-<img src="/image/new_test.png" alt="aug" width="535" height="250"/>
+<img src="/image/new_test.png" alt="aug" width="525" height="250"/>
 
 The quality of chosen images is good in general. But some of them might be difficult to classify since the brightness of image is low or the image is a bit tilted. Moreover, the accuracy also depends on the resolution of input image and the architechture of your network. If, for instance, a high resolution image is resized into 32x32 to fit the model input size, lots of pixel information are lost. Therefore, it is highly possible for the model to make a wrong prediction. 
 
@@ -182,10 +182,10 @@ Here are the results of the prediction. The model was able to correctly guess 7 
 
 <!-- Possible reasons might be that the image quality of new data is better than the test set(thus easier to recognize) and the number of new data is much smaller than test set.  -->
 
-<img src="/image/match.png" alt="aug" width="550" height="200"/>
+<img src="/image/match.png" alt="aug" width="550" height="205"/>
 
 
-The bar chart of softmax probabilities is located in the 26th cell of the Ipython notebook. The probabilities of all correctly classified images are very close or equal to 1.0.
+The bar chart of softmax probabilities is located in the 26th cell of the Ipython notebook. The probabilities of all correctly classified images are very close or equal to 1.0. Some of the bar charts are shown below.
 
 <img src="/image/soft1.png" alt="aug" width="650" height="370"/>
 
@@ -194,15 +194,15 @@ The bar chart of softmax probabilities is located in the 26th cell of the Ipytho
 
 ### Future improvement
 
-1. Currently the input size of the model is fixed due to the given format of training set images(32x32). This may affect the performance of the model but allow the model run faster. In order to increase the accuracy of unseen images, the input size should be extended to higher resolution. 
+1. Currently the input size of the model is fixed due to the given format of pickled dataset(32x32). This may affect the performance of the model but allow it to run faster. In order to increase the accuracy of unseen images, the input size could be extended to higher resolution. 
 
-2. The visualization of convolutional layers is implemented in this project. Add the visualizing part for fully connected layers. Look into the meaning of those feature maps and gain more understanding about CNN.
+2. The visualization of convolutional layers is implemented in this project. Add the visualizing part for fully connected layers. Look into the meaning of those feature maps and gain more insights about CNN.
 
-3. Look into the test set performance and the distribution of 
+3. Look into the test set performance, the distribution and the quality of incorrectly classified images.
 
-3. Compare the performance of different optimizers and plot the learning curves.
+4. compare the performance of different optimizers and plot the learning curves.
 
-4. Try out more combination of hyperparameters or different models, such as AlexNet, VGG.
+5. Try out more combination of hyperparameters or different models, such as AlexNet, VGGNet.
 
 
 
